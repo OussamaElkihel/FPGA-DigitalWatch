@@ -1,0 +1,14 @@
+
+**** Build of configuration Nios II for project montreNIOS_bsp ****
+
+make all 
+      1 [main] pwd 892 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 14264 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+makefile:554: Warning: SOPC File E:/SOC_TPs/montre2/montre.sopcinfo could not be found.
+      0 [main] sh 12296 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[BSP build complete]
+
+**** Build Finished ****

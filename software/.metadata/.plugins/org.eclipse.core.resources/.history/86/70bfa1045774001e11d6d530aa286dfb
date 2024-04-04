@@ -1,0 +1,276 @@
+#include "sys/alt_stdio.h"
+#include "system.h"
+#include <unistd.h>
+#include  "sys/alt_irq.h"
+
+unsigned char seven_seg_decode_table[] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7C, 0x07, 0x7F, 0x67, 0x77, 0x7C, 0x39, 0x5E, 0x79, 0x71 };
+char	hex_segments[] = { 0, 0, 0, 0 };
+
+volatile int * BOTTONS_ptr = (int *) BOTTONS_BASE;
+
+int var ;
+
+void Update_HEX_display( int buffer ){
+		volatile int * HEX3_HEX0_ptr = (int *) HEX_BASE;
+		int shift_buffer, nibble;
+		char code;
+		int i;
+
+		shift_buffer = buffer;
+		for ( i = 0 ; i < 4 ; ++i )
+		{
+			nibble = shift_buffer & 0x0000000F;		// character is in rightmost nibble
+			code = seven_seg_decode_table[nibble];
+			hex_segments[i] = code;
+			shift_buffer = shift_buffer >> 4;
+		}
+		*(HEX3_HEX0_ptr) =  *(int *) hex_segments; 		// drive the hex displays
+		return;
+}
+
+
+volatile int edge_capture;
+volatile int *Timer_POINTER = (int *) TIMER_BASE;
+
+//void Increment_temps (time temp);
+
+short seconds = 0 ;
+short minutes = 0 ;
+short heurs   = 0 ;
+
+
+short temps_minute ;
+short temps_heurs ;
+short temps_seconds ;
+
+short chrono_minute ;
+short chrono_seconds ;
+
+void affiche_hex_min_sec();
+void affiche_hex_heur_min();
+short separer_num_2_time(short num);
+
+
+
+void Increment_time_temps ()
+{
+		if (temps_seconds >= 59)
+		{
+			temps_seconds = 0 ;
+
+			if (temps_minute >= 59 )
+			{
+				temps_minute = 0 ;
+				if (temps_heurs >= 23 ) temps_heurs = 0 ;
+				else temps_heurs ++ ;
+			}
+			else temps_minute  ++  ;
+		}
+		else temps_seconds ++ ;
+}
+
+
+void Increment_time_chrono ( )
+{
+		if (chrono_seconds >= 59)
+		{
+			chrono_seconds = 0 ;
+			if (chrono_minute >= 59 )
+			{
+				chrono_minute = 0 ;
+			}
+			else chrono_minute ++  ;
+		}
+		else chrono_seconds ++ ;
+}
+
+
+void handle_TIMER_interrupts (void* context, alt_u32 id) ;
+
+void init_timer(){
+	void * edge_capture_ptr = (void*) & edge_capture ;
+
+	*(Timer_POINTER + 1) = 0X7 ;
+	alt_irq_register (TIMER_IRQ   , edge_capture_ptr, handle_TIMER_interrupts);
+
+}
+
+int affiche_Mode 	= 	0x1 ;                // 1 : mode normale   / 0 : mode chrono
+int chrono_etat  	=  	0x0 ;    			// 1 : etat declanche / 0 : etat pause
+int change_temps 	=  	0x0 ; 		        // 1 : mode change    / 0 : mode sans chang. par l'utilisateur
+int Change_Minute 	= 	0x1 ; 		         // 1 : change min  / 0 : change heurs
+
+
+
+void handle_TIMER_interrupts (void* context, alt_u32 id)
+{
+
+		if ( chrono_etat  )
+		{
+			Increment_time_chrono() ;
+			 Increment_time_temps() ;
+		}
+
+		//if ( !change_temps  )  Increment_time_temps() ;
+
+	//Increment_time_temps();
+
+	( affiche_Mode | change_temps  ) ? affiche_hex_heur_min() : affiche_hex_min_sec() ;
+
+	// ( !affiche_Mode & !change_temps  ) ? affiche_hex_heur_min() : affiche_hex_min_sec() ;
+
+
+
+	*(Timer_POINTER ) = 0 ;
+}
+
+
+short separer_num_2_time(short num)
+{
+	int i ;
+	short num_dec, num_unit ;
+	for ( i = 0 ; i <= 5 ; i++)
+	{
+		if( (int) ( (num - (i*10))) / 10  == 0 )
+		{
+			num_dec = i;
+			break;
+		}
+	}
+
+	num_unit = num - (num_dec * 10) ;
+	return ((num_unit & 0xf ) | (( num_dec << 4 )& 0xf0) ) ;
+}
+
+
+
+void affiche_hex_heur_min()
+{
+	int buff_heurs, buff_minute;
+	int Buffer_HEX ;
+
+	buff_heurs    =		separer_num_2_time  (temps_heurs);
+	buff_minute  =		separer_num_2_time  (temps_minute);
+
+	Buffer_HEX = (buff_minute & 0xff ) | ((buff_heurs & 0xff) << 8);
+	Update_HEX_display(Buffer_HEX);
+}
+
+
+void affiche_hex_min_sec()
+{
+	int buff_minute, buff_seconds;
+	int Buffer_HEX ;
+
+	buff_minute    =  separer_num_2_time(chrono_minute);
+	buff_seconds   =  separer_num_2_time(chrono_seconds);
+
+	Buffer_HEX = (buff_seconds & 0xff ) | ((buff_minute & 0xff) << 8);
+	Update_HEX_display(Buffer_HEX);
+}
+
+
+volatile int * KEY_POINTER = (int *) BOTTONS_BASE;
+
+void handle_KEY_interrupts(void* context, alt_u32 id)
+{
+			int press = * (KEY_POINTER + 3 ); // lecture du registre du periph
+
+			if ( press & 0X1) 								// KEY 1 ::       RESET      / exit mode change temps
+				{
+							if ( change_temps | (!affiche_Mode) )
+							{
+								temps_heurs = 0 ; temps_minute = 0 ; temps_seconds = 0 ;
+								chrono_minute = 0 ;  chrono_seconds = 0 ;
+							}
+				}
+
+				else if ( press & 0X4 )					 // KEY 3   ::    PAUSE    /  DECLANCHER      /    ---
+				{
+							if ( change_temps )
+							{
+								if (Change_Minute)
+								{
+										if (temps_minute >=  0  )
+												temps_minute -- ;
+										else
+												temps_minute = 59 ;
+								}
+								else if ( !Change_Minute )
+								{
+										if (temps_heurs >  0 )
+											temps_heurs -- ;
+										else
+											temps_heurs = 23 ;
+								}
+					}
+					else if ( !change_temps )
+					chrono_etat = ! chrono_etat ;
+				}
+
+				else if ( press & 0X2 ) 							// KEY 2 				 /   ++
+				{
+							if ( change_temps )
+								{
+									if (Change_Minute)
+									{
+											if (temps_minute < 59  )
+													temps_minute ++ ;
+											else
+													temps_minute = 0 ;
+									}
+									else if ( !Change_Minute )
+									{
+											if (temps_heurs < 24  )
+												temps_heurs ++ ;
+											else
+												temps_heurs = 0 ;
+									}
+								}
+				}
+
+				else if ( press & 0X8 ) 									// KEY 4 / mode normale => mode chrono => mode change_time => mode normale
+				{
+							if ( affiche_Mode == 0x1 ) 				// chang. mode normale => mode chrono
+									affiche_Mode =0x0 ;
+
+							else if ( (!affiche_Mode) & (!change_temps) ) 	//mode actuelle: mode chrono  chang. mode chrono => mode change_temps(minute)
+							{
+								change_temps  = 1 ;
+								Change_Minute = 1 ;
+							}
+							else if ( (!affiche_Mode) & change_temps & Change_Minute ) 	  // chang. mode change_temps(minutes) => mode change_temps(heures)
+							{
+								Change_Minute =  0  ;
+							}
+							else if ( (!affiche_Mode) & change_temps  & !Change_Minute ) // chang. mode change_temps => mode normal
+							{
+								change_temps  = 0 ;
+								Change_Minute = 0 ;
+								affiche_Mode   = 1  ;
+							}
+				}
+
+			*(KEY_POINTER + 3) = 0 ; // effacer le registre du periph
+}
+
+void init_key()
+{
+	void * edge_capture_ptr = (void*) & edge_capture ;
+	*(KEY_POINTER + 2) = 0XF ; // Masque de l’interruption
+
+	alt_irq_register ( BOTTONS_IRQ , edge_capture_ptr,handle_KEY_interrupts);
+}
+
+
+int main()
+{
+	temps_heurs = 0 ; temps_minute = 0 ; temps_seconds = 0 ;
+	chrono_minute = 0 ;  chrono_seconds = 0 ;
+	init_key();
+	init_timer();
+
+
+	return 0 ;
+
+}

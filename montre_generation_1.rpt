@@ -1,0 +1,274 @@
+Info: Starting: Create simulation model
+Info: ip-generate --project-directory=E:/SOC_TPs/montre2/ --output-directory=E:/SOC_TPs/montre2/montre/simulation/ --file-set=SIM_VHDL --report-file=sopcinfo:E:/SOC_TPs/montre2/montre.sopcinfo --report-file=html:E:/SOC_TPs/montre2/montre.html --report-file=sip:E:/SOC_TPs/montre2/montre/simulation/montre.sip --report-file=csv:E:/SOC_TPs/montre2/montre.csv --report-file=spd:E:/SOC_TPs/montre2/montre.spd --report-file=cmp:E:/SOC_TPs/montre2/montre.cmp --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C20F484C7 --system-info=DEVICE_SPEEDGRADE=7 --component-file=E:/SOC_TPs/montre2/montre.qsys
+Progress: Loading montre2/montre.qsys
+Progress: Reading input file
+Progress: Adding nios2_qsys_0 [altera_nios2_qsys 13.0]
+Progress: Parameterizing module nios2_qsys_0
+Progress: Adding sdram [altera_avalon_new_sdram_controller 13.0.1.99.2]
+Progress: Parameterizing module sdram
+Progress: Adding pll [altera_up_clocks 13.0]
+Progress: Parameterizing module pll
+Progress: Adding timer [altera_avalon_timer 13.0.1.99.2]
+Progress: Parameterizing module timer
+Progress: Adding bottons [altera_up_avalon_parallel_port 13.0]
+Progress: Parameterizing module bottons
+Progress: Adding hex [altera_up_avalon_parallel_port 13.0]
+Progress: Parameterizing module hex
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 13.0.1.99.2]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding clk_50 [clock_source 13.0]
+Progress: Parameterizing module clk_50
+Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 13.0]
+Progress: Parameterizing module sysid_qsys_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: montre.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: montre.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Info: montre: Generating montre "montre" for SIM_VHDL
+Info: pipeline_bridge_swap_transform: After transform: 9 modules, 33 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_translator_transform: After transform: 18 modules, 60 connections
+Info: merlin_domain_transform: After transform: 36 modules, 147 connections
+Info: merlin_router_transform: After transform: 45 modules, 174 connections
+Info: merlin_burst_transform: After transform: 46 modules, 177 connections
+Info: reset_adaptation_transform: After transform: 47 modules, 179 connections
+Info: merlin_network_to_switch_transform: After transform: 64 modules, 225 connections
+Info: merlin_width_transform: After transform: 66 modules, 231 connections
+Info: merlin_mm_transform: After transform: 66 modules, 231 connections
+Info: merlin_interrupt_mapper_transform: After transform: 67 modules, 234 connections
+Info: nios2_qsys_0: Starting RTL generation for module 'montre_nios2_qsys_0'
+Info: nios2_qsys_0:   Generation command is [exec C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/eperl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -- C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=montre_nios2_qsys_0 --dir=C:/Users/INPT/AppData/Local/Temp/alt9278_6403610938761838453.dir/0024_nios2_qsys_0_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --vhdl --config=C:/Users/INPT/AppData/Local/Temp/alt9278_6403610938761838453.dir/0024_nios2_qsys_0_gen//montre_nios2_qsys_0_processor_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/INPT/AppData/Local/Temp/alt9278_6403610938761838453.dir/0024_nios2_qsys_0_gen/    --bogus  ]
+Info: nios2_qsys_0: # 2022.10.13 12:00:55 (*) Starting Nios II generation
+Info: nios2_qsys_0: # 2022.10.13 12:00:55 (*)   Checking for plaintext license.
+Info: nios2_qsys_0: # 2022.10.13 12:00:56 (*)   Couldn't query license setup in Quartus directory C:/altera/13.0sp1/quartus
+Info: nios2_qsys_0: # 2022.10.13 12:00:56 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: nios2_qsys_0: # 2022.10.13 12:00:56 (*)   Plaintext license not found.
+Info: nios2_qsys_0: # 2022.10.13 12:00:56 (*)   No license required to generate encrypted Nios II/e.
+Info: nios2_qsys_0: # 2022.10.13 12:00:56 (*)   Elaborating CPU configuration settings
+Info: nios2_qsys_0: # 2022.10.13 12:00:56 (*)   Creating all objects for CPU
+Info: nios2_qsys_0: # 2022.10.13 12:00:57 (*)   Creating 'C:/Users/INPT/AppData/Local/Temp/alt9278_6403610938761838453.dir/0024_nios2_qsys_0_gen//montre_nios2_qsys_0_nios2_waves.do'
+Info: nios2_qsys_0: # 2022.10.13 12:00:57 (*)   Generating RTL from CPU objects
+Info: nios2_qsys_0: # 2022.10.13 12:00:57 (*)   Creating plain-text RTL
+Info: nios2_qsys_0: # 2022.10.13 12:01:00 (*) Done Nios II generation
+Info: nios2_qsys_0: Done RTL generation for module 'montre_nios2_qsys_0'
+Info: nios2_qsys_0: "montre" instantiated altera_nios2_qsys "nios2_qsys_0"
+Info: sdram: Starting RTL generation for module 'montre_sdram'
+Info: sdram:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=montre_sdram --dir=C:/Users/INPT/AppData/Local/Temp/alt9278_6403610938761838453.dir/0025_sdram_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --vhdl --config=C:/Users/INPT/AppData/Local/Temp/alt9278_6403610938761838453.dir/0025_sdram_gen//montre_sdram_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/INPT/AppData/Local/Temp/alt9278_6403610938761838453.dir/0025_sdram_gen/  ]
+Info: sdram: Done RTL generation for module 'montre_sdram'
+Info: sdram: "montre" instantiated altera_avalon_new_sdram_controller "sdram"
+Info: pll: Starting Generation of Required Clocks for DE-Series Boards
+Info: pll: "montre" instantiated altera_up_clocks "pll"
+Info: timer: Starting RTL generation for module 'montre_timer'
+Info: timer:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=montre_timer --dir=C:/Users/INPT/AppData/Local/Temp/alt9278_6403610938761838453.dir/0027_timer_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --vhdl --config=C:/Users/INPT/AppData/Local/Temp/alt9278_6403610938761838453.dir/0027_timer_gen//montre_timer_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/INPT/AppData/Local/Temp/alt9278_6403610938761838453.dir/0027_timer_gen/  ]
+Info: timer: Done RTL generation for module 'montre_timer'
+Info: timer: "montre" instantiated altera_avalon_timer "timer"
+Info: bottons: Starting Generation of Parallel Port
+Info: bottons: "montre" instantiated altera_up_avalon_parallel_port "bottons"
+Info: hex: Starting Generation of Parallel Port
+Info: hex: "montre" instantiated altera_up_avalon_parallel_port "hex"
+Info: jtag_uart_0: Starting RTL generation for module 'montre_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=montre_jtag_uart_0 --dir=C:/Users/INPT/AppData/Local/Temp/alt9278_6403610938761838453.dir/0030_jtag_uart_0_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --vhdl --config=C:/Users/INPT/AppData/Local/Temp/alt9278_6403610938761838453.dir/0030_jtag_uart_0_gen//montre_jtag_uart_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/INPT/AppData/Local/Temp/alt9278_6403610938761838453.dir/0030_jtag_uart_0_gen/  ]
+Info: jtag_uart_0: Done RTL generation for module 'montre_jtag_uart_0'
+Info: jtag_uart_0: "montre" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: sysid_qsys_0: Generating VHDL simulation model
+Warning: Parallel compilation is not licensed and has been disabled
+Info: sysid_qsys_0: Generated simulation model montre_sysid_qsys_0.vho
+Info: sysid_qsys_0: "montre" instantiated altera_avalon_sysid_qsys "sysid_qsys_0"
+Info: nios2_qsys_0_instruction_master_translator: "montre" instantiated altera_merlin_master_translator "nios2_qsys_0_instruction_master_translator"
+Info: nios2_qsys_0_jtag_debug_module_translator: "montre" instantiated altera_merlin_slave_translator "nios2_qsys_0_jtag_debug_module_translator"
+Info: nios2_qsys_0_instruction_master_translator_avalon_universal_master_0_agent: "montre" instantiated altera_merlin_master_agent "nios2_qsys_0_instruction_master_translator_avalon_universal_master_0_agent"
+Info: nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent: "montre" instantiated altera_merlin_slave_agent "nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent"
+Info: nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo: Generating VHDL simulation model
+Warning: Parallel compilation is not licensed and has been disabled
+Info: nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo: Generated simulation model montre_nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo.vho
+Info: nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo: "montre" instantiated altera_avalon_sc_fifo "nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo"
+Info: sdram_s1_translator_avalon_universal_slave_0_agent_rsp_fifo: Generating VHDL simulation model
+Warning: Parallel compilation is not licensed and has been disabled
+Info: sdram_s1_translator_avalon_universal_slave_0_agent_rsp_fifo: Generated simulation model montre_sdram_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vho
+Info: sdram_s1_translator_avalon_universal_slave_0_agent_rsp_fifo: "montre" instantiated altera_avalon_sc_fifo "sdram_s1_translator_avalon_universal_slave_0_agent_rsp_fifo"
+Info: sdram_s1_translator_avalon_universal_slave_0_agent_rdata_fifo: Generating VHDL simulation model
+Warning: Parallel compilation is not licensed and has been disabled
+Info: sdram_s1_translator_avalon_universal_slave_0_agent_rdata_fifo: Generated simulation model montre_sdram_s1_translator_avalon_universal_slave_0_agent_rdata_fifo.vho
+Info: sdram_s1_translator_avalon_universal_slave_0_agent_rdata_fifo: "montre" instantiated altera_avalon_sc_fifo "sdram_s1_translator_avalon_universal_slave_0_agent_rdata_fifo"
+Warning: Parallel compilation is not licensed and has been disabled
+Info: addr_router: "montre" instantiated altera_merlin_router "addr_router"
+Warning: Parallel compilation is not licensed and has been disabled
+Info: id_router: "montre" instantiated altera_merlin_router "id_router"
+Warning: Parallel compilation is not licensed and has been disabled
+Info: id_router_001: "montre" instantiated altera_merlin_router "id_router_001"
+Info: burst_adapter: "montre" instantiated altera_merlin_burst_adapter "burst_adapter"
+Info: rst_controller: "montre" instantiated altera_reset_controller "rst_controller"
+Info: cmd_xbar_demux: Generating VHDL simulation model
+Warning: Parallel compilation is not licensed and has been disabled
+Info: cmd_xbar_demux: Generated simulation model montre_cmd_xbar_demux.vho
+Info: cmd_xbar_demux: "montre" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: cmd_xbar_mux: Generating VHDL simulation model
+Warning: Parallel compilation is not licensed and has been disabled
+Info: cmd_xbar_mux: Generated simulation model montre_cmd_xbar_mux.vho
+Info: cmd_xbar_mux: "montre" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info: rsp_xbar_demux: Generating VHDL simulation model
+Warning: Parallel compilation is not licensed and has been disabled
+Info: rsp_xbar_demux: Generated simulation model montre_rsp_xbar_demux.vho
+Info: rsp_xbar_demux: "montre" instantiated altera_merlin_demultiplexer "rsp_xbar_demux"
+Info: rsp_xbar_mux: Generating VHDL simulation model
+Warning: Parallel compilation is not licensed and has been disabled
+Info: rsp_xbar_mux: Generated simulation model montre_rsp_xbar_mux.vho
+Info: rsp_xbar_mux: "montre" instantiated altera_merlin_multiplexer "rsp_xbar_mux"
+Info: width_adapter: "montre" instantiated altera_merlin_width_adapter "width_adapter"
+Info: Reusing file E:/SOC_TPs/montre2/montre/simulation/submodules/mentor/altera_merlin_address_alignment.sv
+Info: Reusing file E:/SOC_TPs/montre2/montre/simulation/submodules/mentor/altera_merlin_burst_uncompressor.sv
+Info: Reusing file E:/SOC_TPs/montre2/montre/simulation/submodules/aldec/altera_merlin_address_alignment.sv
+Info: Reusing file E:/SOC_TPs/montre2/montre/simulation/submodules/aldec/altera_merlin_burst_uncompressor.sv
+Info: irq_mapper: Generating VHDL simulation model
+Warning: Parallel compilation is not licensed and has been disabled
+Info: irq_mapper: Generated simulation model montre_irq_mapper.vho
+Info: irq_mapper: "montre" instantiated altera_irq_mapper "irq_mapper"
+Info: montre: Done montre" with 27 modules, 175 files, 8848019 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=E:/SOC_TPs/montre2/montre.spd --output-directory=E:/SOC_TPs/montre2/montre/simulation/
+Info: Doing: ip-make-simscript --spd=E:/SOC_TPs/montre2/montre.spd --output-directory=E:/SOC_TPs/montre2/montre/simulation/
+Info: Generating the following file(s) for MODELSIM simulator in E:/SOC_TPs/montre2/montre/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd is required for simulation
+Info: Generating the following file(s) for VCSMX simulator in E:/SOC_TPs/montre2/montre/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in E:/SOC_TPs/montre2/montre/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	19 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERAPRO simulator in E:/SOC_TPs/montre2/montre/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory=E:/SOC_TPs/montre2/ --output-directory=E:/SOC_TPs/montre2/montre/ --report-file=bsf:E:/SOC_TPs/montre2/montre.bsf --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C20F484C7 --system-info=DEVICE_SPEEDGRADE=7 --component-file=E:/SOC_TPs/montre2/montre.qsys
+Progress: Loading montre2/montre.qsys
+Progress: Reading input file
+Progress: Adding nios2_qsys_0 [altera_nios2_qsys 13.0]
+Progress: Parameterizing module nios2_qsys_0
+Progress: Adding sdram [altera_avalon_new_sdram_controller 13.0.1.99.2]
+Progress: Parameterizing module sdram
+Progress: Adding pll [altera_up_clocks 13.0]
+Progress: Parameterizing module pll
+Progress: Adding timer [altera_avalon_timer 13.0.1.99.2]
+Progress: Parameterizing module timer
+Progress: Adding bottons [altera_up_avalon_parallel_port 13.0]
+Progress: Parameterizing module bottons
+Progress: Adding hex [altera_up_avalon_parallel_port 13.0]
+Progress: Parameterizing module hex
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 13.0.1.99.2]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding clk_50 [clock_source 13.0]
+Progress: Parameterizing module clk_50
+Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 13.0]
+Progress: Parameterizing module sysid_qsys_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: montre.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: montre.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=E:/SOC_TPs/montre2/ --output-directory=E:/SOC_TPs/montre2/montre/synthesis/ --file-set=QUARTUS_SYNTH --report-file=sopcinfo:E:/SOC_TPs/montre2/montre.sopcinfo --report-file=html:E:/SOC_TPs/montre2/montre.html --report-file=qip:E:/SOC_TPs/montre2/montre/synthesis/montre.qip --report-file=cmp:E:/SOC_TPs/montre2/montre.cmp --report-file=svd --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C20F484C7 --system-info=DEVICE_SPEEDGRADE=7 --component-file=E:/SOC_TPs/montre2/montre.qsys --language=VHDL
+Progress: Loading montre2/montre.qsys
+Progress: Reading input file
+Progress: Adding nios2_qsys_0 [altera_nios2_qsys 13.0]
+Progress: Parameterizing module nios2_qsys_0
+Progress: Adding sdram [altera_avalon_new_sdram_controller 13.0.1.99.2]
+Progress: Parameterizing module sdram
+Progress: Adding pll [altera_up_clocks 13.0]
+Progress: Parameterizing module pll
+Progress: Adding timer [altera_avalon_timer 13.0.1.99.2]
+Progress: Parameterizing module timer
+Progress: Adding bottons [altera_up_avalon_parallel_port 13.0]
+Progress: Parameterizing module bottons
+Progress: Adding hex [altera_up_avalon_parallel_port 13.0]
+Progress: Parameterizing module hex
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 13.0.1.99.2]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding clk_50 [clock_source 13.0]
+Progress: Parameterizing module clk_50
+Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 13.0]
+Progress: Parameterizing module sysid_qsys_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: montre.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: montre.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Info: montre: Generating montre "montre" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 9 modules, 33 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_translator_transform: After transform: 18 modules, 60 connections
+Info: merlin_domain_transform: After transform: 36 modules, 147 connections
+Info: merlin_router_transform: After transform: 45 modules, 174 connections
+Info: merlin_burst_transform: After transform: 46 modules, 177 connections
+Info: reset_adaptation_transform: After transform: 47 modules, 179 connections
+Info: merlin_network_to_switch_transform: After transform: 64 modules, 225 connections
+Info: merlin_width_transform: After transform: 66 modules, 231 connections
+Info: merlin_mm_transform: After transform: 66 modules, 231 connections
+Info: merlin_interrupt_mapper_transform: After transform: 67 modules, 234 connections
+Info: nios2_qsys_0: Starting RTL generation for module 'montre_nios2_qsys_0'
+Info: nios2_qsys_0:   Generation command is [exec C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/eperl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -- C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=montre_nios2_qsys_0 --dir=C:/Users/INPT/AppData/Local/Temp/alt9278_6403610938761838453.dir/0075_nios2_qsys_0_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/INPT/AppData/Local/Temp/alt9278_6403610938761838453.dir/0075_nios2_qsys_0_gen//montre_nios2_qsys_0_processor_configuration.pl  --do_build_sim=0    --bogus  ]
+Info: nios2_qsys_0: # 2022.10.13 12:01:45 (*) Starting Nios II generation
+Info: nios2_qsys_0: # 2022.10.13 12:01:45 (*)   Checking for plaintext license.
+Info: nios2_qsys_0: # 2022.10.13 12:01:45 (*)   Couldn't query license setup in Quartus directory C:/altera/13.0sp1/quartus
+Info: nios2_qsys_0: # 2022.10.13 12:01:45 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: nios2_qsys_0: # 2022.10.13 12:01:46 (*)   Plaintext license not found.
+Info: nios2_qsys_0: # 2022.10.13 12:01:46 (*)   No license required to generate encrypted Nios II/e.
+Info: nios2_qsys_0: # 2022.10.13 12:01:46 (*)   Elaborating CPU configuration settings
+Info: nios2_qsys_0: # 2022.10.13 12:01:46 (*)   Creating all objects for CPU
+Info: nios2_qsys_0: # 2022.10.13 12:01:47 (*)   Generating RTL from CPU objects
+Info: nios2_qsys_0: # 2022.10.13 12:01:47 (*)   Creating plain-text RTL
+Info: nios2_qsys_0: # 2022.10.13 12:01:48 (*) Done Nios II generation
+Info: nios2_qsys_0: Done RTL generation for module 'montre_nios2_qsys_0'
+Info: nios2_qsys_0: "montre" instantiated altera_nios2_qsys "nios2_qsys_0"
+Info: sdram: Starting RTL generation for module 'montre_sdram'
+Info: sdram:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=montre_sdram --dir=C:/Users/INPT/AppData/Local/Temp/alt9278_6403610938761838453.dir/0076_sdram_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/INPT/AppData/Local/Temp/alt9278_6403610938761838453.dir/0076_sdram_gen//montre_sdram_component_configuration.pl  --do_build_sim=0  ]
+Info: sdram: Done RTL generation for module 'montre_sdram'
+Info: sdram: "montre" instantiated altera_avalon_new_sdram_controller "sdram"
+Info: pll: Starting Generation of Required Clocks for DE-Series Boards
+Info: pll: "montre" instantiated altera_up_clocks "pll"
+Info: timer: Starting RTL generation for module 'montre_timer'
+Info: timer:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=montre_timer --dir=C:/Users/INPT/AppData/Local/Temp/alt9278_6403610938761838453.dir/0078_timer_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/INPT/AppData/Local/Temp/alt9278_6403610938761838453.dir/0078_timer_gen//montre_timer_component_configuration.pl  --do_build_sim=0  ]
+Info: timer: Done RTL generation for module 'montre_timer'
+Info: timer: "montre" instantiated altera_avalon_timer "timer"
+Info: bottons: Starting Generation of Parallel Port
+Info: bottons: "montre" instantiated altera_up_avalon_parallel_port "bottons"
+Info: hex: Starting Generation of Parallel Port
+Info: hex: "montre" instantiated altera_up_avalon_parallel_port "hex"
+Info: jtag_uart_0: Starting RTL generation for module 'montre_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=montre_jtag_uart_0 --dir=C:/Users/INPT/AppData/Local/Temp/alt9278_6403610938761838453.dir/0081_jtag_uart_0_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/INPT/AppData/Local/Temp/alt9278_6403610938761838453.dir/0081_jtag_uart_0_gen//montre_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0: Done RTL generation for module 'montre_jtag_uart_0'
+Info: jtag_uart_0: "montre" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: sysid_qsys_0: "montre" instantiated altera_avalon_sysid_qsys "sysid_qsys_0"
+Info: nios2_qsys_0_instruction_master_translator: "montre" instantiated altera_merlin_master_translator "nios2_qsys_0_instruction_master_translator"
+Info: nios2_qsys_0_jtag_debug_module_translator: "montre" instantiated altera_merlin_slave_translator "nios2_qsys_0_jtag_debug_module_translator"
+Info: nios2_qsys_0_instruction_master_translator_avalon_universal_master_0_agent: "montre" instantiated altera_merlin_master_agent "nios2_qsys_0_instruction_master_translator_avalon_universal_master_0_agent"
+Info: nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent: "montre" instantiated altera_merlin_slave_agent "nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent"
+Info: nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo: "montre" instantiated altera_avalon_sc_fifo "nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo"
+Info: addr_router: "montre" instantiated altera_merlin_router "addr_router"
+Info: id_router: "montre" instantiated altera_merlin_router "id_router"
+Info: id_router_001: "montre" instantiated altera_merlin_router "id_router_001"
+Info: burst_adapter: "montre" instantiated altera_merlin_burst_adapter "burst_adapter"
+Info: rst_controller: "montre" instantiated altera_reset_controller "rst_controller"
+Info: cmd_xbar_demux: "montre" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: cmd_xbar_mux: "montre" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info: rsp_xbar_demux: "montre" instantiated altera_merlin_demultiplexer "rsp_xbar_demux"
+Info: rsp_xbar_mux: "montre" instantiated altera_merlin_multiplexer "rsp_xbar_mux"
+Info: Reusing file E:/SOC_TPs/montre2/montre/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: width_adapter: "montre" instantiated altera_merlin_width_adapter "width_adapter"
+Info: Reusing file E:/SOC_TPs/montre2/montre/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file E:/SOC_TPs/montre2/montre/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: irq_mapper: "montre" instantiated altera_irq_mapper "irq_mapper"
+Info: montre: Done montre" with 25 modules, 132 files, 2764988 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

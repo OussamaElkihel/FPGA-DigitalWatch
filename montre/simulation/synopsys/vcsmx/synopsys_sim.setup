@@ -1,0 +1,30 @@
+
+WORK > DEFAULT
+DEFAULT:                                                                          ./libraries/work/                                                                            
+work:                                                                             ./libraries/work/                                                                            
+irq_mapper:                                                                       ./libraries/irq_mapper/                                                                      
+rsp_xbar_mux:                                                                     ./libraries/rsp_xbar_mux/                                                                    
+rsp_xbar_demux:                                                                   ./libraries/rsp_xbar_demux/                                                                  
+cmd_xbar_mux:                                                                     ./libraries/cmd_xbar_mux/                                                                    
+cmd_xbar_demux:                                                                   ./libraries/cmd_xbar_demux/                                                                  
+id_router_001:                                                                    ./libraries/id_router_001/                                                                   
+id_router:                                                                        ./libraries/id_router/                                                                       
+addr_router:                                                                      ./libraries/addr_router/                                                                     
+sdram_s1_translator_avalon_universal_slave_0_agent_rdata_fifo:                    ./libraries/sdram_s1_translator_avalon_universal_slave_0_agent_rdata_fifo/                   
+sdram_s1_translator_avalon_universal_slave_0_agent_rsp_fifo:                      ./libraries/sdram_s1_translator_avalon_universal_slave_0_agent_rsp_fifo/                     
+jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent_rsp_fifo: ./libraries/jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent_rsp_fifo/
+nios2_qsys_0:                                                                     ./libraries/nios2_qsys_0/                                                                    
+sysid_qsys_0:                                                                     ./libraries/sysid_qsys_0/                                                                    
+jtag_uart_0:                                                                      ./libraries/jtag_uart_0/                                                                     
+hex:                                                                              ./libraries/hex/                                                                             
+bottons:                                                                          ./libraries/bottons/                                                                         
+timer:                                                                            ./libraries/timer/                                                                           
+pll:                                                                              ./libraries/pll/                                                                             
+sdram:                                                                            ./libraries/sdram/                                                                           
+altera:                                                                           ./libraries/altera/                                                                          
+lpm:                                                                              ./libraries/lpm/                                                                             
+sgate:                                                                            ./libraries/sgate/                                                                           
+altera_mf:                                                                        ./libraries/altera_mf/                                                                       
+altera_lnsim:                                                                     ./libraries/altera_lnsim/                                                                    
+cycloneii:                                                                        ./libraries/cycloneii/                                                                       
+LIBRARY_SCAN = TRUE

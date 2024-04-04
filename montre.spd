@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="montre/simulation/submodules/montre_irq_mapper.vho"
+   type="VHDL"
+   library="irq_mapper" />
+ <file
+   path="montre/simulation/submodules/mentor/altera_merlin_width_adapter.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="width_adapter"
+   simulator="modelsim" />
+ <file
+   path="montre/simulation/submodules/mentor/altera_merlin_address_alignment.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="width_adapter"
+   simulator="modelsim" />
+ <file
+   path="montre/simulation/submodules/mentor/altera_merlin_burst_uncompressor.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="width_adapter"
+   simulator="modelsim" />
+ <file
+   path="montre/simulation/submodules/aldec/altera_merlin_width_adapter.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="width_adapter"
+   simulator="riviera" />
+ <file
+   path="montre/simulation/submodules/aldec/altera_merlin_address_alignment.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="width_adapter"
+   simulator="riviera" />
+ <file
+   path="montre/simulation/submodules/aldec/altera_merlin_burst_uncompressor.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="width_adapter"
+   simulator="riviera" />
+ <file
+   path="montre/simulation/submodules/montre_rsp_xbar_mux.vho"
+   type="VHDL"
+   library="rsp_xbar_mux" />
+ <file
+   path="montre/simulation/submodules/montre_rsp_xbar_demux.vho"
+   type="VHDL"
+   library="rsp_xbar_demux" />
+ <file
+   path="montre/simulation/submodules/montre_cmd_xbar_mux.vho"
+   type="VHDL"
+   library="cmd_xbar_mux" />
+ <file
+   path="montre/simulation/submodules/montre_cmd_xbar_demux.vho"
+   type="VHDL"
+   library="cmd_xbar_demux" />
+ <file
+   path="montre/simulation/submodules/mentor/altera_reset_controller.v"
+   type="VERILOG_ENCRYPT"
+   library="rst_controller"
+   simulator="modelsim" />
+ <file
+   path="montre/simulation/submodules/mentor/altera_reset_synchronizer.v"
+   type="VERILOG_ENCRYPT"
+   library="rst_controller"
+   simulator="modelsim" />
+ <file
+   path="montre/simulation/submodules/aldec/altera_reset_controller.v"
+   type="VERILOG_ENCRYPT"
+   library="rst_controller"
+   simulator="riviera" />
+ <file
+   path="montre/simulation/submodules/aldec/altera_reset_synchronizer.v"
+   type="VERILOG_ENCRYPT"
+   library="rst_controller"
+   simulator="riviera" />
+ <file
+   path="montre/simulation/submodules/mentor/altera_merlin_burst_adapter.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="burst_adapter"
+   simulator="modelsim" />
+ <file
+   path="montre/simulation/submodules/mentor/altera_merlin_address_alignment.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="burst_adapter"
+   simulator="modelsim" />
+ <file
+   path="montre/simulation/submodules/aldec/altera_merlin_burst_adapter.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="burst_adapter"
+   simulator="riviera" />
+ <file
+   path="montre/simulation/submodules/aldec/altera_merlin_address_alignment.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="burst_adapter"
+   simulator="riviera" />
+ <file
+   path="montre/simulation/submodules/montre_id_router_001.vho"
+   type="VHDL"
+   library="id_router_001" />
+ <file
+   path="montre/simulation/submodules/montre_id_router.vho"
+   type="VHDL"
+   library="id_router" />
+ <file
+   path="montre/simulation/submodules/montre_addr_router.vho"
+   type="VHDL"
+   library="addr_router" />
+ <file
+   path="montre/simulation/submodules/montre_sdram_s1_translator_avalon_universal_slave_0_agent_rdata_fifo.vho"
+   type="VHDL"
+   library="sdram_s1_translator_avalon_universal_slave_0_agent_rdata_fifo" />
+ <file
+   path="montre/simulation/submodules/montre_sdram_s1_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"
+   type="VHDL"
+   library="sdram_s1_translator_avalon_universal_slave_0_agent_rsp_fifo" />
+ <file
+   path="montre/simulation/submodules/montre_jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent_rsp_fifo.vho"
+   type="VHDL"
+   library="jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent_rsp_fifo" />
+ <file
+   path="montre/simulation/submodules/mentor/altera_merlin_slave_agent.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent"
+   simulator="modelsim" />
+ <file
+   path="montre/simulation/submodules/mentor/altera_merlin_burst_uncompressor.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent"
+   simulator="modelsim" />
+ <file
+   path="montre/simulation/submodules/aldec/altera_merlin_slave_agent.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent"
+   simulator="riviera" />
+ <file
+   path="montre/simulation/submodules/aldec/altera_merlin_burst_uncompressor.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent"
+   simulator="riviera" />
+ <file
+   path="montre/simulation/submodules/mentor/altera_merlin_master_agent.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="nios2_qsys_0_data_master_translator_avalon_universal_master_0_agent"
+   simulator="modelsim" />
+ <file
+   path="montre/simulation/submodules/aldec/altera_merlin_master_agent.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="nios2_qsys_0_data_master_translator_avalon_universal_master_0_agent"
+   simulator="riviera" />
+ <file
+   path="montre/simulation/submodules/mentor/altera_merlin_slave_translator.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="jtag_uart_0_avalon_jtag_slave_translator"
+   simulator="modelsim" />
+ <file
+   path="montre/simulation/submodules/aldec/altera_merlin_slave_translator.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="jtag_uart_0_avalon_jtag_slave_translator"
+   simulator="riviera" />
+ <file
+   path="montre/simulation/submodules/mentor/altera_merlin_master_translator.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="nios2_qsys_0_data_master_translator"
+   simulator="modelsim" />
+ <file
+   path="montre/simulation/submodules/aldec/altera_merlin_master_translator.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="nios2_qsys_0_data_master_translator"
+   simulator="riviera" />
+ <file
+   path="montre/simulation/submodules/montre_nios2_qsys_0.sdc"
+   type="SDC"
+   library="nios2_qsys_0" />
+ <file
+   path="montre/simulation/submodules/montre_nios2_qsys_0.vhd"
+   type="VHDL"
+   library="nios2_qsys_0" />
+ <file
+   path="montre/simulation/submodules/montre_nios2_qsys_0_jtag_debug_module_sysclk.vhd"
+   type="VHDL"
+   library="nios2_qsys_0" />
+ <file
+   path="montre/simulation/submodules/montre_nios2_qsys_0_jtag_debug_module_tck.vhd"
+   type="VHDL"
+   library="nios2_qsys_0" />
+ <file
+   path="montre/simulation/submodules/montre_nios2_qsys_0_jtag_debug_module_wrapper.vhd"
+   type="VHDL"
+   library="nios2_qsys_0" />
+ <file
+   path="montre/simulation/submodules/montre_nios2_qsys_0_nios2_waves.do"
+   type="OTHER"
+   library="nios2_qsys_0" />
+ <file
+   path="montre/simulation/submodules/montre_nios2_qsys_0_ociram_default_contents.dat"
+   type="DAT"
+   library="nios2_qsys_0" />
+ <file
+   path="montre/simulation/submodules/montre_nios2_qsys_0_ociram_default_contents.hex"
+   type="HEX"
+   library="nios2_qsys_0" />
+ <file
+   path="montre/simulation/submodules/montre_nios2_qsys_0_ociram_default_contents.mif"
+   type="MIF"
+   library="nios2_qsys_0" />
+ <file
+   path="montre/simulation/submodules/montre_nios2_qsys_0_oci_test_bench.vhd"
+   type="VHDL"
+   library="nios2_qsys_0" />
+ <file
+   path="montre/simulation/submodules/montre_nios2_qsys_0_rf_ram_a.dat"
+   type="DAT"
+   library="nios2_qsys_0" />
+ <file
+   path="montre/simulation/submodules/montre_nios2_qsys_0_rf_ram_a.hex"
+   type="HEX"
+   library="nios2_qsys_0" />
+ <file
+   path="montre/simulation/submodules/montre_nios2_qsys_0_rf_ram_a.mif"
+   type="MIF"
+   library="nios2_qsys_0" />
+ <file
+   path="montre/simulation/submodules/montre_nios2_qsys_0_rf_ram_b.dat"
+   type="DAT"
+   library="nios2_qsys_0" />
+ <file
+   path="montre/simulation/submodules/montre_nios2_qsys_0_rf_ram_b.hex"
+   type="HEX"
+   library="nios2_qsys_0" />
+ <file
+   path="montre/simulation/submodules/montre_nios2_qsys_0_rf_ram_b.mif"
+   type="MIF"
+   library="nios2_qsys_0" />
+ <file
+   path="montre/simulation/submodules/montre_nios2_qsys_0_test_bench.vhd"
+   type="VHDL"
+   library="nios2_qsys_0" />
+ <file
+   path="montre/simulation/submodules/montre_sysid_qsys_0.vho"
+   type="VHDL"
+   library="sysid_qsys_0" />
+ <file
+   path="montre/simulation/submodules/montre_jtag_uart_0.vhd"
+   type="VHDL"
+   library="jtag_uart_0" />
+ <file
+   path="montre/simulation/submodules/montre_hex.vhd"
+   type="VHDL"
+   library="hex" />
+ <file
+   path="montre/simulation/submodules/montre_bottons.vhd"
+   type="VHDL"
+   library="bottons" />
+ <file
+   path="montre/simulation/submodules/montre_timer.vhd"
+   type="VHDL"
+   library="timer" />
+ <file
+   path="montre/simulation/submodules/montre_pll.vhd"
+   type="VHDL"
+   library="pll" />
+ <file
+   path="montre/simulation/submodules/montre_sdram.vhd"
+   type="VHDL"
+   library="sdram" />
+ <file path="montre/simulation/montre.vhd" type="VHDL" />
+ <file
+   path="montre/simulation/montre_jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent.vhd"
+   type="VHDL" />
+ <file
+   path="montre/simulation/montre_sdram_s1_translator_avalon_universal_slave_0_agent.vhd"
+   type="VHDL" />
+ <file path="montre/simulation/montre_width_adapter.vhd" type="VHDL" />
+ <file path="montre/simulation/montre_width_adapter_001.vhd" type="VHDL" />
+ <file
+   path="montre/simulation/montre_nios2_qsys_0_data_master_translator.vhd"
+   type="VHDL" />
+ <file
+   path="montre/simulation/montre_nios2_qsys_0_instruction_master_translator.vhd"
+   type="VHDL" />
+ <file
+   path="montre/simulation/montre_jtag_uart_0_avalon_jtag_slave_translator.vhd"
+   type="VHDL" />
+ <file path="montre/simulation/montre_sdram_s1_translator.vhd" type="VHDL" />
+ <file path="montre/simulation/montre_timer_s1_translator.vhd" type="VHDL" />
+ <file
+   path="montre/simulation/montre_nios2_qsys_0_jtag_debug_module_translator.vhd"
+   type="VHDL" />
+ <file
+   path="montre/simulation/montre_bottons_avalon_parallel_port_slave_translator.vhd"
+   type="VHDL" />
+ <file
+   path="montre/simulation/montre_sysid_qsys_0_control_slave_translator.vhd"
+   type="VHDL" />
+ <topLevel name="montre" />
+ <deviceFamily name="cycloneii" />
+</simPackage>

@@ -1,0 +1,66 @@
+Info: Starting: Create simulation model
+Info: ip-generate --project-directory=E:/SOC_TPs/Mon_TP_SOC/montre2/ --output-directory=E:/SOC_TPs/Mon_TP_SOC/montre2/montre/simulation/ --file-set=SIM_VHDL --report-file=sopcinfo:E:/SOC_TPs/Mon_TP_SOC/montre2/montre.sopcinfo --report-file=html:E:/SOC_TPs/Mon_TP_SOC/montre2/montre.html --report-file=sip:E:/SOC_TPs/Mon_TP_SOC/montre2/montre/simulation/montre.sip --report-file=csv:E:/SOC_TPs/Mon_TP_SOC/montre2/montre.csv --report-file=spd:E:/SOC_TPs/Mon_TP_SOC/montre2/montre.spd --report-file=cmp:E:/SOC_TPs/Mon_TP_SOC/montre2/montre.cmp --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C20F484C7 --system-info=DEVICE_SPEEDGRADE=7 --component-file=E:/SOC_TPs/Mon_TP_SOC/montre2/montre.qsys
+Progress: Loading montre2/montre.qsys
+Progress: Reading input file
+Progress: Adding sdram [altera_avalon_new_sdram_controller 13.0.1.99.2]
+Progress: Parameterizing module sdram
+Progress: Adding pll [altera_up_clocks 13.0]
+Progress: Parameterizing module pll
+Progress: Adding timer [altera_avalon_timer 13.0.1.99.2]
+Progress: Parameterizing module timer
+Progress: Adding bottons [altera_up_avalon_parallel_port 13.0]
+Progress: Parameterizing module bottons
+Progress: Adding hex [altera_up_avalon_parallel_port 13.0]
+Progress: Parameterizing module hex
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 13.0.1.99.2]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding clk_50 [clock_source 13.0]
+Progress: Parameterizing module clk_50
+Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 13.0]
+Progress: Parameterizing module sysid_qsys_0
+Progress: Adding nios2_qsys_0 [altera_nios2_qsys 13.0]
+Progress: Parameterizing module nios2_qsys_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: montre.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: montre.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Info: montre: Generating montre "montre" for SIM_VHDL
+Info: pipeline_bridge_swap_transform: After transform: 9 modules, 33 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_translator_transform: After transform: 18 modules, 60 connections
+Info: merlin_domain_transform: After transform: 36 modules, 147 connections
+Info: merlin_router_transform: After transform: 45 modules, 174 connections
+Info: merlin_burst_transform: After transform: 46 modules, 177 connections
+Info: reset_adaptation_transform: After transform: 47 modules, 179 connections
+Info: merlin_network_to_switch_transform: After transform: 64 modules, 225 connections
+Info: merlin_width_transform: After transform: 66 modules, 231 connections
+Info: merlin_mm_transform: After transform: 66 modules, 231 connections
+Info: merlin_interrupt_mapper_transform: After transform: 67 modules, 234 connections
+Info: sdram: Starting RTL generation for module 'montre_sdram'
+Info: sdram:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=montre_sdram --dir=C:/Users/INPT/AppData/Local/Temp/alt9656_6575715370234113518.dir/0001_sdram_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --vhdl --config=C:/Users/INPT/AppData/Local/Temp/alt9656_6575715370234113518.dir/0001_sdram_gen//montre_sdram_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/INPT/AppData/Local/Temp/alt9656_6575715370234113518.dir/0001_sdram_gen/  ]
+Info: sdram: Done RTL generation for module 'montre_sdram'
+Info: sdram: "montre" instantiated altera_avalon_new_sdram_controller "sdram"
+Info: pll: Starting Generation of Required Clocks for DE-Series Boards
+Info: pll: "montre" instantiated altera_up_clocks "pll"
+Info: timer: Starting RTL generation for module 'montre_timer'
+Info: timer:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=montre_timer --dir=C:/Users/INPT/AppData/Local/Temp/alt9656_6575715370234113518.dir/0003_timer_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --vhdl --config=C:/Users/INPT/AppData/Local/Temp/alt9656_6575715370234113518.dir/0003_timer_gen//montre_timer_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/INPT/AppData/Local/Temp/alt9656_6575715370234113518.dir/0003_timer_gen/  ]
+Info: timer: Done RTL generation for module 'montre_timer'
+Info: timer: "montre" instantiated altera_avalon_timer "timer"
+Info: bottons: Starting Generation of Parallel Port
+Info: bottons: "montre" instantiated altera_up_avalon_parallel_port "bottons"
+Info: hex: Starting Generation of Parallel Port
+Info: hex: "montre" instantiated altera_up_avalon_parallel_port "hex"
+Info: jtag_uart_0: Starting RTL generation for module 'montre_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=montre_jtag_uart_0 --dir=C:/Users/INPT/AppData/Local/Temp/alt9656_6575715370234113518.dir/0006_jtag_uart_0_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --vhdl --config=C:/Users/INPT/AppData/Local/Temp/alt9656_6575715370234113518.dir/0006_jtag_uart_0_gen//montre_jtag_uart_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/INPT/AppData/Local/Temp/alt9656_6575715370234113518.dir/0006_jtag_uart_0_gen/  ]
+Info: jtag_uart_0: Done RTL generation for module 'montre_jtag_uart_0'
+Info: jtag_uart_0: "montre" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: sysid_qsys_0: Generating VHDL simulation model
+Warning: Parallel compilation is not licensed and has been disabled
+Info: sysid_qsys_0: Generated simulation model montre_sysid_qsys_0.vho
+Info: sysid_qsys_0: "montre" instantiated altera_avalon_sysid_qsys "sysid_qsys_0"
+Error: Generation stopped, 71 or more modules remaining
+Info: montre: Done montre" with 27 modules, 20 files, 754877 bytes
+Error: ip-generate failed with exit code 1: 1 Error, 1 Warning
+Info: Stopping: Create simulation model

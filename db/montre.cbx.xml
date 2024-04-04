@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="montre">
+		<CBX_INST_ENTRY INSTANCE_NAME="|montre|montre_jtag_uart_0:jtag_uart_0|montre_jtag_uart_0_scfifo_w:the_montre_jtag_uart_0_scfifo_w|scfifo:wfifo" CBX_FILE_NAME="scfifo_1n21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|montre|montre_nios2_qsys_0:nios2_qsys_0|montre_nios2_qsys_0_nios2_oci:the_montre_nios2_qsys_0_nios2_oci|montre_nios2_qsys_0_nios2_ocimem:the_montre_nios2_qsys_0_nios2_ocimem|montre_nios2_qsys_0_ociram_sp_ram_module:montre_nios2_qsys_0_ociram_sp_ram|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_9681.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|montre|montre_nios2_qsys_0:nios2_qsys_0|montre_nios2_qsys_0_register_bank_a_module:montre_nios2_qsys_0_register_bank_a|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_5pg1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|montre|montre_nios2_qsys_0:nios2_qsys_0|montre_nios2_qsys_0_register_bank_b_module:montre_nios2_qsys_0_register_bank_b|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_6pg1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|montre|montre_jtag_uart_0:jtag_uart_0|montre_jtag_uart_0_scfifo_r:the_montre_jtag_uart_0_scfifo_r|scfifo:rfifo" CBX_FILE_NAME="scfifo_1n21.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
